@@ -1,7 +1,7 @@
 package com.SistemaGestionMedica.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -44,6 +44,6 @@ public class Usuario {
 	        joinColumns = {@JoinColumn(name = "usuario_id",  referencedColumnName="id")},
 	        inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName="id")})
 	    
-	    private Set<Rol> roles = new HashSet();
+	    private List<Rol> roles = new ArrayList<>();
 	
 }
